@@ -1,3 +1,6 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap');
+
 /* Asterisk wildcard selector to override default styles added by the browser */
 /* From Love Running Walkthrough Project */
 * {
@@ -10,7 +13,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family:;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* Header */
@@ -34,10 +37,14 @@ header img {
     margin: 0 50px;
 }
 
-h1, h2 {
+h1 {
     text-align: center;
 }
 
+h2 {
+    text-align: center;
+    font-size: 100%;
+}
 
 .score-area {
     display: flex;
@@ -55,9 +62,9 @@ main {
     background-color: beige;
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
-    /* Add margin at the top and bottom to prevent content from being covered by the header and footer */
+    /* Add margin at the top prevent content from being covered by the header and footer */
     margin-top: 100px;
     /* Enable flex properties for child elements */
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
  }
