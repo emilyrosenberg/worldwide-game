@@ -22,7 +22,7 @@ header {
     z-index: 99;
     height: 100px;
     width: 100%;
-    box-shadow: 0 2px 2px #494244;
+    border-bottom: 2px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,9 +34,10 @@ header img {
     margin: 0 50px;
 }
 
-header h1 {
+h1, h2 {
     text-align: center;
 }
+
 
 .score-area {
     display: flex;
