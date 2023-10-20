@@ -1,7 +1,62 @@
-header {
-    background-color: lightblue;
+/* Asterisk wildcard selector to override default styles added by the browser */
+/* From Love Running Walkthrough Project */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family:;
+}
+
+/* Header */
+/* Inspired by Love Running Walkthrough Project */
+header {
+    background-color: lightblue;
+    padding: 1rem 1rem;
+    position: fixed;
+    z-index: 99;
+    height: 100px;
+    width: 100%;
+    box-shadow: 0 2px 2px #494244;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}    
+
+header img {
+    height: 50px;
+    width: 50px;
+    margin: 0 50px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+.score-area {
+    display: flex;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.score-area p {
+    margin: 2px;
+}
+
+/* Main content */
+/* Inspired by Love Running Walkthrough Project */
 main {
     background-color: beige;
-}
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;
+    /* Add margin at the top and bottom to prevent content from being covered by the header and footer */
+    margin-top: 100px;
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
+ }
