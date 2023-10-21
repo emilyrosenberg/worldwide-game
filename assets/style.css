@@ -27,7 +27,8 @@ header {
     width: 100%;
     border-bottom: 2px solid black;
     /* display: flex; */
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
     /* align-items: center; */
     text-align: center;
 }    
@@ -35,7 +36,7 @@ header {
 header img {
     height: 50px;
     width: 50px;
-    margin: 1rem;
+    margin: 10px 54px;
 }
 
 h1 {
