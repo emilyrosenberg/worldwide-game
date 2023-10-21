@@ -83,7 +83,7 @@ main {
  .question-area {
     /* Code from Love Maths Walkthrough Project to make responsive */
     width: 85%;
-    height: 70vh;
+    height: 60vh;
     max-height: 500px;
     max-width: 830px;
     margin-left: auto;
@@ -99,7 +99,7 @@ main {
 
 .answer-area {
     width: 85%;
-    height: 10vh;
+    height: 20vh;
     max-height: 100px;
     max-width: 830px;
     margin-left: auto;
@@ -109,7 +109,15 @@ main {
     /* padding: 10px; */
     /* display: flex; */
     /* justify-content: space-evenly; */
-    
+}
+
+button {
+    border: solid 2px black;
+    padding: 5px;
+    margin: 15px;
+    width: 70px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 100%;
 }
 
 /* Media query: tablets and larger (768px and up) */
@@ -120,4 +128,8 @@ main {
         display: flex;
         align-items: center;
     }    
+
+    .question {
+        padding-top: 30vh;
+    }
 }
