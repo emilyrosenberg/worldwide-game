@@ -70,15 +70,21 @@ main {
     /* Add margin at the top prevent content from being covered by the header and footer */
     margin-top: 100px;
     /* Enable flex properties for child elements */
-    /* display: flex; */
-    /* flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+ }
+
+ main {
+    /* align-items: center;
+    justify-content: center; */
+    text-align: center;
  }
 
  .question-area {
     /* Code from Love Maths Walkthrough Project to make responsive */
     width: 85%;
-    height: 65vh;
-    max-height: 450px;
+    height: 70vh;
+    max-height: 500px;
     max-width: 830px;
     margin-left: auto;
     margin-right: auto;
@@ -86,8 +92,24 @@ main {
     background-color: bisque;
 }
 
-.answer-area {
+.question {
+    padding-top: 40vh;
+    font-size: 120%;
+}
 
+.answer-area {
+    width: 85%;
+    height: 10vh;
+    max-height: 100px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 1%; */
+    background-color: lavender;
+    /* padding: 10px; */
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    
 }
 
 /* Media query: tablets and larger (768px and up) */
