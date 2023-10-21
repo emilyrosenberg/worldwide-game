@@ -19,18 +19,19 @@ body {
 /* Header */
 /* Inspired by Love Running Walkthrough Project */
 header {
-    background-color: lightblue;
+    background-color: #f7fff7;
     padding: 1rem 1rem;
     position: fixed;
     z-index: 99;
     /* height: 100px; */
     width: 100%;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #1a535c;
     /* display: flex; */
     /* justify-content: space-between; */
     justify-content: space-evenly;
     /* align-items: center; */
     text-align: center;
+    color: #1a535c;
 }    
 
 header img {
@@ -52,7 +53,7 @@ h2 {
 
 .score-area {
     display: inline-flex;
-    border: 2px solid black;
+    border: 2px solid #4ecdc4;
     padding: 5px;
     justify-content: center;
     margin: 10px;
@@ -65,7 +66,7 @@ h2 {
 /* Main content */
 /* Inspired by Love Running Walkthrough Project */
 main {
-    background-color: beige;
+    background-color: #4ecdc4;
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     /* Add margin at the top prevent content from being covered by the header and footer */
@@ -79,6 +80,7 @@ main {
     /* align-items: center;
     justify-content: center; */
     text-align: center;
+    color: #1a535c;
  }
 
  .question-area {
@@ -89,8 +91,8 @@ main {
     max-width: 830px;
     margin-left: auto;
     margin-right: auto;
-    padding: 1%;
-    background-color: bisque;
+    padding: 0 5px;
+    background-color: #cdf3eb;
 }
 
 .question {
@@ -106,19 +108,22 @@ main {
     margin-left: auto;
     margin-right: auto;
     /* padding: 1%; */
-    background-color: lavender;
+    background-color: #cdf3eb;
     /* padding: 10px; */
     /* display: flex; */
     /* justify-content: space-evenly; */
 }
 
 button {
-    border: solid 2px black;
+    border: solid 2px #4ecdc4;
     padding: 5px;
     margin: 15px;
     width: 70px;
     font-family: 'Raleway', sans-serif;
     font-size: 100%;
+    color: #1a535c;
+    background-color: #f7fff7;
+
 }
 
 /* Media query: tablets and larger (768px and up) */
