@@ -23,33 +23,38 @@ header {
     padding: 1rem 1rem;
     position: fixed;
     z-index: 99;
-    height: 100px;
+    /* height: 100px; */
     width: 100%;
     border-bottom: 2px solid black;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
+    text-align: center;
 }    
 
 header img {
     height: 50px;
     width: 50px;
-    margin: 0 50px;
+    margin: 1rem;
 }
 
 h1 {
-    text-align: center;
+    /* text-align: center; */
+    font-size: 2rem;
 }
 
 h2 {
-    text-align: center;
-    font-size: 100%;
+    /* text-align: center; */
+    font-size: 1rem;
+    padding: 10px;
 }
 
 .score-area {
-    display: flex;
+    display: inline-flex;
     border: 2px solid black;
     padding: 5px;
+    justify-content: center;
+    margin: 10px;
 }
 
 .score-area p {
@@ -65,6 +70,32 @@ main {
     /* Add margin at the top prevent content from being covered by the header and footer */
     margin-top: 100px;
     /* Enable flex properties for child elements */
-    /* display: flex;
-    flex-direction: column; */
+    /* display: flex; */
+    /* flex-direction: column; */
  }
+
+ .question-area {
+    /* Code from Love Maths Walkthrough Project to make responsive */
+    width: 85%;
+    height: 65vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    background-color: bisque;
+}
+
+.answer-area {
+
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width:768px) {
+    /* Header */
+    /* Inspired by Love Running Walkthrough Project */
+    header {
+        display: flex;
+        align-items: center;
+    }    
+}
