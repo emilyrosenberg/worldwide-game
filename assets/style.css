@@ -95,7 +95,7 @@ main {
     background-color: #cdf3eb;
 }
 
-.question {
+#question {
     padding-top: 40vh;
     font-size: 120%;
 }
