@@ -1,19 +1,39 @@
-function runGame() {
+// From Love Maths walkthrough project
+// document.addEventListener("DOMContentLoaded", function() {
+//     let buttons = document.getElementsByTagName("button");
 
-}
+//     for (let button of buttons) {
+//         button.addEventListener("click", function() {
+//             if (this.getAttribute("data-type") === "submit") {
+//                 checkAnswer();
+//             } else {
+//                 let gameType = this.getAttribute("data-type");
+//                 runGame(gameType);
+//             }
+//         });
+//     }    
+
 
 // Idea from https://www.sitepoint.com/simple-javascript-quiz/
 
 let quizQuestions = [
-    {question: "The Republic of Malta is the smallest microstate worldwide",
+    {question: "The Republic of Malta is the smallest microstate worldwide.",
     correctAnswer: "false"
-    // more questions go here
     }
+     // more questions go here
 ]
 
-function displayQuestion(quizQuestions) {
-    document.getElementById('question').textContent = quizQuestions;
-}
+// From tutoring (Roman)
+function displayQuestion() {
+    document.getElementById('question').textContent = quizQuestions[0].question;
+    }
+    displayQuestion();
+
+   
+
+// function displayQuestion(quizQuestions) {
+//     document.getElementById('question').textContent = quizQuestions;
+// }
 
 // quizQuestions.forEach(
 //     (currentQuestion, questionNumber) => {
@@ -29,7 +49,9 @@ function displayQuestion(quizQuestions) {
 //     questions = loadedQuestions;
 // });
 
+function runGame() {
 
+}
 
 function checkAnswer() {
 
