@@ -1,12 +1,86 @@
+var currentQuestion = 0;
+var questions = [{
+    "question": "The Republic of Malta is the smallest microstate worldwide.",
+    "answer": "false",
+    },
+    {"question":"Greenland is almost as big as Africa.",
+    "answer": "false"
+    },
+    {"question": "Greenland is covered with grass and Iceland covered with ice.",
+    "answer": "false",
+    },
+    {"question": "There is a city called Rome in every continent on Earth.",
+    "answer": "false",
+    },
+    {"question": "California is larger than Japan.",
+    "answer": "true",
+    }
+]
+
+(function() {
+    fnReset();
+});
+
+document.getElementById("next-question").addEventListener("click", function(event) {
+    fnCheck();
+});
+
+document.getElementById("true-button").addEventListener("click", function(event) {
+    fnCheck(true);
+});
+
+document.getElementById("false-button").addEventListener("click", function(event) {
+    fnCheck(false);
+});
+
+document.getElementById("next-question").addEventListener("click", function(event) {
+    fnReset();
+})
+
+
+
+function fnReset () {
+    document.getElementById("next-question").classList.add("hide");
+    currentQuestion = 0;
+    document.getElementById("question-text").innerHTML = questions[currentQuestion].question;
+}
+
+function fnCheck(answer) {
+    var questionAnswer = questions[currentQuestion].answer;
+    if (questionAnswer === answer) {
+        // show correct
+        // alert
+        document.getElementById("").innerHTML = "You chose ''" + answer + "'. The answer is '" + questionAnswer + "'. ";
+    } else {
+        // show incorrect
+        // alert
+        document.getElementById("").innerHTML = "You chose ''" + answer + "'. The answer is '" + questionAnswer + "'. ";
+
+    }
+}
+
+function fnNext() {
+    document.getElementById(question-text).classList.add("hide");
+    if(currentQuestion < questions.length - 1) {
+        currentQuestion = currentQuestion +1;
+        document.getElementById("next-question").classList.add("hide");   
+    } else {
+        document.getElementById("next-question").classList.add("hide");
+    }
+    
+    document.getElementById("question-text").innerHTML = questions[currentQuestion].question;
+}
+
+
 
 // Idea from https://www.sitepoint.com/simple-javascript-quiz/
 // Array of quiz questions generated from Open Trivia Database https://opentdb.com/api_config.php
-let quizQuestions = [
-    {question: "The Republic of Malta is the smallest microstate worldwide.",
-    answer: "false",
-    }
+// let quizQuestions = [
+//     {question: "The Republic of Malta is the smallest microstate worldwide.",
+//     answer: "false",
+//     }
 
-]
+// ]
     // future questions
     // {question:"Greenland is almost as big as Africa.",
     // answer: "false"
@@ -23,16 +97,16 @@ let quizQuestions = [
    
 // From tutoring (Roman)
 // Display question from question array above
-function displayQuestion() {
-    document.getElementById('question').textContent = quizQuestions[0].question;
-    }
-    displayQuestion();
+// function displayQuestion() {
+//     document.getElementById('question').textContent = quizQuestions[0].question;
+//     }
+//     displayQuestion();
 // Add code to display the next question
 
 //  Listen for true/false button click event
- button.addEventListener("click", function() {
-        checkAnswer();
-    })
+//  button.addEventListener("click", function() {
+//         checkAnswer();
+//     })
 
 // If true button is clicked and answer = true, show alert and increment score and show the next question. If answer true button is clicked and answer = false, show alert and show the next question. And vice-versa.
 function checkAnswer() {

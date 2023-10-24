@@ -95,7 +95,7 @@ main {
     background-color: #cdf3eb;
 }
 
-#question {
+#question-text {
     padding-top: 40vh;
     font-size: 120%;
 }
@@ -128,6 +128,10 @@ button {
 
 #next-question {
     width: 150px
+}
+
+.hide {
+    display:none;
 }
 
 /* Media query: tablets and larger (768px and up) */
