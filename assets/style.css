@@ -86,7 +86,7 @@ main {
  .question-area {
     /* Code from Love Maths Walkthrough Project to make responsive */
     width: 85%;
-    height: 60vh;
+    height: 55vh;
     max-height: 500px;
     max-width: 830px;
     margin-left: auto;
@@ -103,7 +103,7 @@ main {
 .answer-area {
     width: 85%;
     height: 20vh;
-    max-height: 100px;
+    max-height: 200px;
     max-width: 830px;
     margin-left: auto;
     margin-right: auto;
@@ -123,7 +123,11 @@ button {
     font-size: 100%;
     color: #1a535c;
     background-color: #f7fff7;
+    /* Add change background color on hover */
+}
 
+#next-question {
+    width: 150px
 }
 
 /* Media query: tablets and larger (768px and up) */

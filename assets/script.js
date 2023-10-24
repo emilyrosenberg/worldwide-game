@@ -1,20 +1,28 @@
-// From Love Maths walkthrough project
-document.addEventListener("DOMContentLoaded"), function() {
-    let button = document.getElementsByTagName("button");
-}
 
 // Idea from https://www.sitepoint.com/simple-javascript-quiz/
 // Array of quiz questions generated from Open Trivia Database https://opentdb.com/api_config.php
 let quizQuestions = [
     {question: "The Republic of Malta is the smallest microstate worldwide.",
-    correctAnswer: "false"
+    answer: "false",
     }
-     // more questions go here
-]
 
+]
+    // future questions
+    // {question:"Greenland is almost as big as Africa.",
+    // answer: "false"
+    // },
+    // {question: "Greenland is covered with grass and Iceland covered with ice.",
+    // answer: "false",
+    // },
+    // {question: "There is a city called Rome in every continent on Earth.",
+    // answer: "false",
+    // },
+    // {question: "California is larger than Japan.",
+    // answer: "true",
+    // }
+   
 // From tutoring (Roman)
 // Display question from question array above
-// Then show the next question
 function displayQuestion() {
     document.getElementById('question').textContent = quizQuestions[0].question;
     }
@@ -28,7 +36,7 @@ function displayQuestion() {
 
 // If true button is clicked and answer = true, show alert and increment score and show the next question. If answer true button is clicked and answer = false, show alert and show the next question. And vice-versa.
 function checkAnswer() {
-
+    let isCorrect = userAnswer === correctAnswer[0];
 }
 
 // If checkAnswer returned correct then increment the score
