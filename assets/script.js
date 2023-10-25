@@ -1,3 +1,4 @@
+// Idea from "How to create a TRUE or FALSE quiz question using JavaScript" https://www.youtube.com/watch?v=MnkD82iHe30
 let currentQuestion = 0;
 let questions = [
     {"question": "The Republic of Malta is the smallest microstate worldwide.",
@@ -18,7 +19,7 @@ let questions = [
 ];
 
 (function() {
-    fnReset();
+    fnStart();
 });
 
 document.getElementById("correct-scores").innerHTML = 0;
@@ -39,36 +40,32 @@ document.getElementById("next-question").addEventListener("click", function(even
     fnNext();
 });
 
-function fnReset () {
+function fnStart () {
     document.getElementById("question-text").innerHTML = questions[currentQuestion].question;
     currentQuestion = 0;
-    document.getElementById("next-question").classList.add("hide"); 
+    // document.getElementById("next-question").classList.add("hide"); 
 }
 
 function fnCheck(answer) {
     let userAnswer = questions[currentQuestion].answer;
     if (userAnswer === answer) {
-        // show correct
-        // document.getElementById("").innerHTML = "You chose ''" + answer + "'. The answer is '" + questionAnswer + "'. ";
         alert("Great job!");
         incrementScore();
     } else {
-        // show incorrect   
-        // document.getElementById("").innerHTML = "You chose ''" + answer + "'. The answer is '" + questionAnswer + "'. ";
-        // alert(`Awwww.... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
         alert("Oops, try again!");
+        // Add code to prevent this when "Next answer button is clicked"
     }
 }
 
 /**
  * Gets the current score from the DOM and increments it by 1
  */
-
 function incrementScore() {
-    if(currentQuestion <= questions.length) {
+    if (currentQuestion <= questions.length) {
         let oldScore = parseInt(document.getElementById("correct-scores").innerText);
         document.getElementById("correct-scores").innerText = ++oldScore;
     } else {
+        // Add code to stop counting up?
         document.getElementById("correct-scores").innerText = questions.length;
     }
 }
@@ -77,13 +74,12 @@ function fnNext() {
     // document.getElementById(question-text).classList.add("hide");
     if(currentQuestion < questions.length - 1) {
         currentQuestion = currentQuestion + 1;
-        document.getElementById("next-question").classList.add("hide");
-    } else {
-        document.getElementById("next-question").classList.add("hide");
-    }
-    
+    //     document.getElementById("next-question").classList.add("hide");
+    // } else {
+    //     document.getElementById("next-question").classList.add("hide");
+    // }
     document.getElementById("question-text").innerHTML = questions[currentQuestion].question;
-}
+}}
 
 
 
