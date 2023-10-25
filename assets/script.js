@@ -55,16 +55,17 @@ let answered = false;
 function checkAnswer(answer) {
     let userAnswer = quizQuestions[currentQuestion].answer;
     
+    // Don't process if the user has already answered
+    // Ideas for setting up this flag and disabling the buttons are from tutoring (Martin)
     if (answered) {
         return;
-        // Don't process if the user has already answered
     }
 
     if (userAnswer === answer) {
         alert("Great job!");
         incrementScore();
     } else {
-        alert("Oops, try again!");
+        alert("Oops, that's not the right answer. But try the next question!");
     }
     document.getElementById("true-button").disabled = true;
     document.getElementById("false-button").disabled = true;
@@ -78,7 +79,7 @@ function incrementScore() {
         let oldScore = parseInt(document.getElementById("correct-scores").innerText);
         document.getElementById("correct-scores").innerText = ++oldScore;
     // } else {
-    //     // FIX THIS: Add code to stop counting up
+    //     Add code to stop counting up
     //     document.getElementById("correct-scores").innerText = oldScore;
     }
 }
