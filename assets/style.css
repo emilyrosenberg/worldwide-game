@@ -123,7 +123,6 @@ button {
     font-size: 100%;
     color: #1a535c;
     background-color: #f7fff7;
-    /* Add change background color on hover */
 }
 
 #next-question {
@@ -145,5 +144,9 @@ button {
 
     .question {
         padding-top: 30vh;
+    }
+
+    button:hover {
+        border: solid 2px #1a535c;
     }
 }

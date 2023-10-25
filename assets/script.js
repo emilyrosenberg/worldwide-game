@@ -42,7 +42,6 @@ document.getElementById("next-question").addEventListener("click", function(even
 function startGame () {
     document.getElementById("question-text").innerText = quizQuestions[currentQuestion].question;
     currentQuestion = 0;
-    // document.getElementById("quiz-questions-length").innerText = quizQuestions.length;
 }
 
 // Checks whether the user answer matches the real answer, shows an alert, and triggers the function for incrementing the score
