@@ -1,21 +1,21 @@
 var currentQuestion = 0;
-var questions = [{
-    "question": "The Republic of Malta is the smallest microstate worldwide.",
-    "answer": "false",
+var questions = [
+    {"question": "The Republic of Malta is the smallest microstate worldwide.",
+    "answer": false,
     },
     {"question":"Greenland is almost as big as Africa.",
-    "answer": "false"
+    "answer": false,
     },
     {"question": "Greenland is covered with grass and Iceland covered with ice.",
-    "answer": "false",
+    "answer": false,
     },
     {"question": "There is a city called Rome in every continent on Earth.",
-    "answer": "false",
+    "answer": false,
     },
     {"question": "California is larger than Japan.",
-    "answer": "true",
+    "answer": true,
     }
-]
+];
 
 (function() {
     fnReset();
@@ -34,15 +34,15 @@ document.getElementById("false-button").addEventListener("click", function(event
 });
 
 document.getElementById("next-question").addEventListener("click", function(event) {
-    fnReset();
-})
+    fnNext();
+});
 
 
 
 function fnReset () {
-    document.getElementById("next-question").classList.add("hide");
-    currentQuestion = 0;
     document.getElementById("question-text").innerHTML = questions[currentQuestion].question;
+    currentQuestion = 0;
+    document.getElementById("next-question").classList.add("hide"); 
 }
 
 function fnCheck(answer) {
@@ -60,10 +60,10 @@ function fnCheck(answer) {
 }
 
 function fnNext() {
-    document.getElementById(question-text).classList.add("hide");
+    // document.getElementById(question-text).classList.add("hide");
     if(currentQuestion < questions.length - 1) {
-        currentQuestion = currentQuestion +1;
-        document.getElementById("next-question").classList.add("hide");   
+        currentQuestion = currentQuestion + 1;
+        document.getElementById("next-question").classList.add("hide");
     } else {
         document.getElementById("next-question").classList.add("hide");
     }
@@ -109,14 +109,14 @@ function fnNext() {
 //     })
 
 // If true button is clicked and answer = true, show alert and increment score and show the next question. If answer true button is clicked and answer = false, show alert and show the next question. And vice-versa.
-function checkAnswer() {
-    let isCorrect = userAnswer === correctAnswer[0];
-}
+// function checkAnswer() {
+//     let isCorrect = userAnswer === correctAnswer[0];
+// }
 
 // If checkAnswer returned correct then increment the score
-function incrementScore() {
+// function incrementScore() {
 
-}
+// }
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     let buttons = document.getElementsByTagName("button");
