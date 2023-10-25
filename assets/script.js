@@ -49,13 +49,13 @@ function fnCheck(answer) {
     var questionAnswer = questions[currentQuestion].answer;
     if (questionAnswer === answer) {
         // show correct
-        // alert
-        document.getElementById("").innerHTML = "You chose ''" + answer + "'. The answer is '" + questionAnswer + "'. ";
+        // document.getElementById("").innerHTML = "You chose ''" + answer + "'. The answer is '" + questionAnswer + "'. ";
+        alert("Great job!");
     } else {
-        // show incorrect
-        // alert
-        document.getElementById("").innerHTML = "You chose ''" + answer + "'. The answer is '" + questionAnswer + "'. ";
-
+        // show incorrect   
+        // document.getElementById("").innerHTML = "You chose ''" + answer + "'. The answer is '" + questionAnswer + "'. ";
+        // alert(`Awwww.... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+        alert("Oops, try again!");
     }
 }
 
