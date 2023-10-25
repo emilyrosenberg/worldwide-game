@@ -75,10 +75,11 @@ function incrementScore() {
 function nextQuestion() {
     if (currentQuestion < quizQuestions.length - 1) {
         currentQuestion = currentQuestion + 1;
+    } else {
+        document.getElementById("next-question").classList.add("hide");
     }
     {document.getElementById("question-text").innerHTML = quizQuestions[currentQuestion].question;
-
-}
+    }
 }
 
 
