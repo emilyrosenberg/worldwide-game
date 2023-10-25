@@ -1,5 +1,5 @@
-var currentQuestion = 0;
-var questions = [
+let currentQuestion = 0;
+let questions = [
     {"question": "The Republic of Malta is the smallest microstate worldwide.",
     "answer": false,
     },
@@ -21,6 +21,8 @@ var questions = [
     fnReset();
 });
 
+document.getElementById("correct-scores").innerHTML = 0;
+
 document.getElementById("next-question").addEventListener("click", function(event) {
     fnCheck();
 });
@@ -37,8 +39,6 @@ document.getElementById("next-question").addEventListener("click", function(even
     fnNext();
 });
 
-
-
 function fnReset () {
     document.getElementById("question-text").innerHTML = questions[currentQuestion].question;
     currentQuestion = 0;
@@ -46,16 +46,30 @@ function fnReset () {
 }
 
 function fnCheck(answer) {
-    var questionAnswer = questions[currentQuestion].answer;
-    if (questionAnswer === answer) {
+    let userAnswer = questions[currentQuestion].answer;
+    if (userAnswer === answer) {
         // show correct
         // document.getElementById("").innerHTML = "You chose ''" + answer + "'. The answer is '" + questionAnswer + "'. ";
         alert("Great job!");
+        incrementScore();
     } else {
         // show incorrect   
         // document.getElementById("").innerHTML = "You chose ''" + answer + "'. The answer is '" + questionAnswer + "'. ";
         // alert(`Awwww.... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
         alert("Oops, try again!");
+    }
+}
+
+/**
+ * Gets the current score from the DOM and increments it by 1
+ */
+
+function incrementScore() {
+    if(currentQuestion <= questions.length) {
+        let oldScore = parseInt(document.getElementById("correct-scores").innerText);
+        document.getElementById("correct-scores").innerText = ++oldScore;
+    } else {
+        document.getElementById("correct-scores").innerText = questions.length;
     }
 }
 
