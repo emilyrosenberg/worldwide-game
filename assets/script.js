@@ -18,9 +18,12 @@ let quizQuestions = [
     }
 ];
 
-(function() {
-    startGame();
-});
+// (function() {
+//     startGame();
+// });
+
+document.getElementById("question-text").innerHTML = quizQuestions[0].question;
+currentQuestion = 0;
 
 document.getElementById("correct-scores").innerText = 0;
 
@@ -39,10 +42,12 @@ document.getElementById("next-question").addEventListener("click", function(even
 });
 
 // FIX THIS: Loads the question text for the first question
-function startGame () {
-    document.getElementById("question-text").innerText = quizQuestions[currentQuestion].question;
-    currentQuestion = 0;
-}
+// function startGame () {
+//     // document.getElementById("question-text").innerText = quizQuestions[currentQuestion].question;
+    
+//     // document.getElementById("question-text").innerHTML = quizQuestions[0].question;
+//     // currentQuestion = 0;
+// }
 
 // Checks whether the user answer matches the real answer, shows an alert, and triggers the function for incrementing the score
 function checkAnswer(answer) {
@@ -68,11 +73,13 @@ function incrementScore() {
 
 // Shows the next question when the button is clicked
 function nextQuestion() {
-    if(currentQuestion < quizQuestions.length - 1) {
+    if (currentQuestion < quizQuestions.length - 1) {
         currentQuestion = currentQuestion + 1;
     }
     {document.getElementById("question-text").innerHTML = quizQuestions[currentQuestion].question;
-}}
+
+}
+}
 
 
 
@@ -86,7 +93,7 @@ function nextQuestion() {
 
 // ]
     // future questions
-    // {question:"Greenland is almost as big as Africa.",
+    // {question: "Greenland is almost as big as Africa.",
     // answer: "false"
     // },
     // {question: "Greenland is covered with grass and Iceland covered with ice.",
