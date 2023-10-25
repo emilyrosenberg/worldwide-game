@@ -99,8 +99,9 @@ The game... -->
 ### Performance testing
 I used Chrome Developer Tools for troubleshooting functionality and style problems during development. It was difficult to find the source of some issues on my own, and the Code Institute tutors helped the most.<br>
 Chrome Developer tools was really useful for testing the responsivity of the website, especially since I developed a wider-screen version first, and then created the mobile version. Because I was able to see the dimensions of each element, and how the flex styles were working, I was able to figure it out. <br>
-<!-- I used the Lighthouse tool to test performance in incognito mode, as suggested by my mentor. After making corrections to the meta description and the profile image size, these were the results on mobile: ![Lighthouse report for mobile landing page](assets/images/readme-images/lighthouse-mobile-1.png) ![Lighthouse report for mobile About page](assets/images/readme-images/lighthouse-mobile-2.png) ![Lighthouse report for mobile Contact page](assets/images/readme-images/lighthouse-mobile-3.png) <br>
-And on desktop:![Lighthouse report for desktop landing page](assets/images/readme-images/lighthouse-desktop-1.png) ![Lighthouse report for desktop About page](assets/images/readme-images/lighthouse-desktop-2.png) ![Lighthouse report for desktop Contact page](assets/images/readme-images/lighthouse-desktop-3.png) -->
+I used the Lighthouse tool to test performance in incognito mode, as suggested by my mentor.<br>
+These were the results on mobile: ![Lighthouse report for mobile](assets/images/readme-images/lighthouse-mobile.png)<br>
+And on desktop: ![Lighthouse report for desktop](assets/images/readme-images/lighthouse-desktop.png)
 
 ### Code validation
 - HTML <br> I validated the HTML code with W3C and found no errors.
