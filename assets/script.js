@@ -50,14 +50,26 @@ document.getElementById("next-question").addEventListener("click", function(even
 // }
 
 // Checks whether the user answer matches the real answer, shows an alert, and triggers the function for incrementing the score
+let answered = false;
+
 function checkAnswer(answer) {
     let userAnswer = quizQuestions[currentQuestion].answer;
+    
+    if (answered) {
+        return;
+        // Don't process if the user has already answered
+    }
+
     if (userAnswer === answer) {
         alert("Great job!");
         incrementScore();
     } else {
         alert("Oops, try again!");
     }
+    document.getElementById("true-button").disabled = true;
+    document.getElementById("false-button").disabled = true;
+    // Set the answered flag to true
+    answered = true; 
 }
 
 // Gets the current score from the DOM and increments it by 1
@@ -65,9 +77,9 @@ function incrementScore() {
     if (currentQuestion <= quizQuestions.length) {
         let oldScore = parseInt(document.getElementById("correct-scores").innerText);
         document.getElementById("correct-scores").innerText = ++oldScore;
-    } else {
-        // FIX THIS: Add code to stop counting up
-        document.getElementById("correct-scores").innerText = oldScore;
+    // } else {
+    //     // FIX THIS: Add code to stop counting up
+    //     document.getElementById("correct-scores").innerText = oldScore;
     }
 }
 
@@ -78,8 +90,13 @@ function nextQuestion() {
     } else {
         document.getElementById("next-question").classList.add("hide");
     }
-    {document.getElementById("question-text").innerHTML = quizQuestions[currentQuestion].question;
-    }
+    // Enable the answer buttons for the next question
+    document.getElementById("true-button").disabled = false;
+    document.getElementById("false-button").disabled = false;
+    document.getElementById("question-text").innerHTML = quizQuestions[currentQuestion].question;
+    // Reset the answered flag
+    answered = false; 
+    document.getElementById("question-text").innerHTML = quizQuestions[currentQuestion].question;
 }
 
 // OLD IDEAS:
