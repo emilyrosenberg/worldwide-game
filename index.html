@@ -36,14 +36,17 @@
 
     <main>
         <div class="question-area">
-            <p id="question-text"></p>
-            <!-- The Republic of Malta is the smallest microstate worldwide. -->
+            <p id="question-text"></p> 
         </div>
         <div class="answer-area">
+            <div id="responses">
+                <p id="response-correct">Great job!</p>
+                <p id="response-incorrect">Oops, try again...</p>
+            </div>
             <button data-type="boolean" id="true-button">True</button>
             <button data-type="boolean" id="false-button">False</button>  
-            <div><button id="next-question">Next question
-            </button>
+            <div>
+                <button id="next-question">Next question</button>
             </div>
         </div>
     </main>
