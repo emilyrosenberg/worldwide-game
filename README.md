@@ -29,6 +29,8 @@ Colors <br>
 I developed a color palette using [Coolors](https://coolors.co/). This turquoise palette is inspired by the blue-green color of the earth, and coordinates with the game's logo, the "globe with meridians" emoji.
 <br>
 ![Color palette with shades of turquoise](assets/images/readme-images/color-palette.png)
+<br>
+For the background design, I used a [CSS pattern](https://www.magicpattern.design/tools/css-backgrounds) as suggested by my cohort facilitator, David Calikes.
 
 Fonts <br>
 I used [Google Fonts](https://fonts.google.com/specimen/Raleway) and chose a sans serif font with an interesting uppercase "W" that makes a fun logo for the game. <br>

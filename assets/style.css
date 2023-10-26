@@ -67,6 +67,10 @@ h2 {
 /* Inspired by Love Running Walkthrough Project */
 main {
     background-color: #4ecdc4;
+    opacity: 0.8;
+    background-image:  repeating-linear-gradient(45deg, #4ecdc4 25%, transparent 25%, transparent 75%, #4ecdc4 75%, #4ecdc4), repeating-linear-gradient(45deg, #4ecdc4 25%, #cdf3eb 25%, #cdf3eb 75%, #4ecdc4 75%, #4ecdc4);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     /* Add margin at the top prevent content from being covered by the header and footer */
@@ -74,11 +78,6 @@ main {
     /* Enable flex properties for child elements */
     display: flex;
     flex-direction: column;
- }
-
- main {
-    /* align-items: center;
-    justify-content: center; */
     text-align: center;
     color: #1a535c;
  }
@@ -116,6 +115,7 @@ main {
 
 button {
     border: solid 2px #4ecdc4;
+    /* box-shadow: 2px 2px 5px #4ecdc4; */
     padding: 5px;
     margin: 15px;
     width: 70px;
@@ -123,10 +123,12 @@ button {
     font-size: 100%;
     color: #1a535c;
     background-color: #f7fff7;
+    
 }
 
 #next-question {
-    width: 150px
+    width: 150px;
+    /* box-shadow: none; */
 }
 
 .hide {
