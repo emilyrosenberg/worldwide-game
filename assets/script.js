@@ -22,6 +22,8 @@ let quizQuestions = [
 //     startGame();
 // });
 
+document.getElementById("response-correct").classList.add("hide");
+document.getElementById("response-incorrect").classList.add("hide");
 document.getElementById("question-text").innerHTML = quizQuestions[0].question;
 currentQuestion = 0;
 
@@ -62,10 +64,12 @@ function checkAnswer(answer) {
     }
 
     if (userAnswer === answer) {
-        alert("Great job!");
+        // alert("Great job!");
+        document.getElementById("response-correct").classList.remove("hide");
         incrementScore();
     } else {
-        alert("Oops, that's not the right answer. But try the next question!");
+        // alert("Oops, that's not the right answer. But try the next question!");
+        document.getElementById("response-incorrect").classList.remove("hide");
     }
     document.getElementById("true-button").disabled = true;
     document.getElementById("false-button").disabled = true;
@@ -86,6 +90,8 @@ function incrementScore() {
 
 // Shows a new question when the button is clicked and hides the button after the final question
 function nextQuestion() {
+    document.getElementById("response-correct").classList.add("hide");
+    document.getElementById("response-incorrect").classList.add("hide");
     if (currentQuestion < quizQuestions.length - 1) {
         currentQuestion = currentQuestion + 1;
     } else {
