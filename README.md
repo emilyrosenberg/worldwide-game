@@ -50,7 +50,8 @@ The website has a header with a logo and score area. In the body of the website 
 <br>
 - Button area: There are two buttons for answers: "True" and "False." Once the user clicks their choice, an alert shows whether it was right or wrong. There is also a button for "Next question," which loads the following question.
 <br>
-- Alerts: Pop-up alerts show the user whether their answer was correct or not. Once they close the alert window, the new score is incremented.
+- Responses: These show the user whether their answer was correct or not. I searched online for [tips](https://www.geeksforgeeks.org/how-to-stack-elements-in-css/), and layered elements with CSS to create this functionality.
+- Play again: This reloads the page, restarting the game from the beginning. I found information about how to do this from [freeCodeCamp](https://www.freecodecamp.org/news/javascript-refresh-page-how-to-reload-a-page-in-js/#:~:text=Method%201%3A%20How%20to%20Refresh,and%20loading%20the%20latest%20content.).
 
 ### Wireframes
 I used Balsamiq to create wireframes for this game. This was very helpful for planning the structure and functionality. <br>

@@ -22,8 +22,12 @@ let quizQuestions = [
 //     startGame();
 // });
 
+// Hides user feedback elements
 document.getElementById("response-correct").classList.add("hide");
 document.getElementById("response-incorrect").classList.add("hide");
+document.getElementById("play-again-button").classList.add("hide");
+
+// Shows first question and sets score to 0
 document.getElementById("question-text").innerHTML = quizQuestions[0].question;
 currentQuestion = 0;
 
@@ -31,6 +35,7 @@ document.getElementById("correct-scores").innerText = 0;
 
 document.getElementById("quiz-questions-length").innerText = quizQuestions.length;
 
+// Event listeners
 document.getElementById("true-button").addEventListener("click", function(event) {
     checkAnswer(true);
 });
@@ -43,16 +48,12 @@ document.getElementById("next-question").addEventListener("click", function(even
     nextQuestion();
 });
 
-// FIX THIS: Loads the question text for the first question
-// function startGame () {
-//     document.getElementById("question-text").innerText = quizQuestions[currentQuestion].question;
-    
-// document.getElementById("question-text").innerHTML = quizQuestions[0].question;
-// currentQuestion = 0;
-// }
+document.getElementById("play-again-button").addEventListener("click", function(event) {
+    resetGame();
+});
 
-// Checks whether the user answer matches the real answer, shows an alert, and triggers the function for incrementing the score
 let answered = false;
+// let finalScore = document.getElementById("score-area");
 
 function checkAnswer(answer) {
     let userAnswer = quizQuestions[currentQuestion].answer;
@@ -82,20 +83,22 @@ function incrementScore() {
     if (currentQuestion <= quizQuestions.length) {
         let oldScore = parseInt(document.getElementById("correct-scores").innerText);
         document.getElementById("correct-scores").innerText = ++oldScore;
-    // } else {
-    //     Add code to stop counting up
-    //     document.getElementById("correct-scores").innerText = oldScore;
-    }
+    } 
 }
 
 // Shows a new question when the button is clicked and hides the button after the final question
 function nextQuestion() {
     document.getElementById("response-correct").classList.add("hide");
     document.getElementById("response-incorrect").classList.add("hide");
+    // Gets the final score to show at the end
+    // document.getElementById("final-score-number").innerText = finalScore;
     if (currentQuestion < quizQuestions.length - 1) {
         currentQuestion = currentQuestion + 1;
     } else {
         document.getElementById("next-question").classList.add("hide");
+        document.getElementById("true-button").classList.add("hide");
+        document.getElementById("false-button").classList.add("hide");
+        document.getElementById("play-again-button").classList.remove("hide");
     }
     // Enable the answer buttons for the next question
     document.getElementById("true-button").disabled = false;
@@ -104,6 +107,10 @@ function nextQuestion() {
     // Reset the answered flag
     answered = false; 
     document.getElementById("question-text").innerHTML = quizQuestions[currentQuestion].question;
+}
+
+function resetGame() {
+    location.reload()
 }
 
 // OLD IDEAS:
