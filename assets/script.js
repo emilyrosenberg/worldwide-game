@@ -96,8 +96,6 @@ function nextQuestion() {
         currentQuestion = currentQuestion + 1;
     } else {
         document.getElementById("next-question").classList.add("hide");
-        document.getElementById("true-button").classList.add("hide");
-        document.getElementById("false-button").classList.add("hide");
         document.getElementById("play-again-button").classList.remove("hide");
     }
     // Enable the answer buttons for the next question
