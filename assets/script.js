@@ -1,4 +1,5 @@
 // Idea from "How to create a TRUE or FALSE quiz question using JavaScript" https://www.youtube.com/watch?v=MnkD82iHe30
+
 let currentQuestion = 0;
 
 // let quizQuestions = [
@@ -19,14 +20,16 @@ let currentQuestion = 0;
 //     }
 // ];
 
-let quizQuestions;
-async function getQuestions() {
-  const response = await fetch("https://opentdb.com/api.php?amount=10&category=22&difficulty=easy&type=boolean");
-  quizQuestions = (await response.json()).results;
+const getQuestions = async function() { 
+    //Async Function Expression
+    const response = await fetch("https://opentdb.com/api.php?amount=10&category=22&difficulty=easy&type=boolean");
+    quizQuestions = (await response.json()).results;
 };
-
-getQuestions();
-console.log(quizQuestions);
+(async () => {
+    await getQuestions();
+    console.log(quizQuestions);
+// the remaining codebase comes here
+})();
 
 // Hides user feedback elements
 document.getElementById("response-correct").classList.add("hide");
@@ -43,11 +46,11 @@ document.getElementById("quiz-questions-length").innerText = quizQuestions.lengt
 
 // Event listeners
 document.getElementById("true-button").addEventListener("click", function(event) {
-    checkAnswer(true);
+    checkAnswer(True);
 });
 
 document.getElementById("false-button").addEventListener("click", function(event) {
-    checkAnswer(false);
+    checkAnswer(False);
 });
 
 document.getElementById("next-question").addEventListener("click", function(event) {
