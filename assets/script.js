@@ -27,9 +27,6 @@ const getQuestions = async function() {
 };
 (async () => {
     await getQuestions();
-    console.log(quizQuestions);
-// the remaining codebase comes here
-})();
 
 // Hides user feedback elements
 document.getElementById("response-correct").classList.add("hide");
@@ -46,11 +43,11 @@ document.getElementById("quiz-questions-length").innerText = quizQuestions.lengt
 
 // Event listeners
 document.getElementById("true-button").addEventListener("click", function(event) {
-    checkAnswer(True);
+    checkAnswer("True");
 });
 
 document.getElementById("false-button").addEventListener("click", function(event) {
-    checkAnswer(False);
+    checkAnswer("False");
 });
 
 document.getElementById("next-question").addEventListener("click", function(event) {
@@ -113,3 +110,4 @@ function nextQuestion() {
 function resetGame() {
     location.reload();
 }
+})();
