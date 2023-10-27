@@ -1,22 +1,32 @@
 // Idea from "How to create a TRUE or FALSE quiz question using JavaScript" https://www.youtube.com/watch?v=MnkD82iHe30
 let currentQuestion = 0;
-let quizQuestions = [
-    {question: "The Republic of Malta is the smallest microstate worldwide.",
-    answer: false,
-    },
-    {question: "Greenland is almost as big as Africa.",
-    answer: false,
-    },
-    {question: "Greenland is covered with grass and Iceland covered with ice.",
-    answer: false,
-    },
-    {question: "There is a city called Rome in every continent on Earth.",
-    "answer": false,
-    },
-    {question: "California is larger than Japan.",
-    answer: true,
-    }
-];
+
+// let quizQuestions = [
+//     {question: "The Republic of Malta is the smallest microstate worldwide.",
+//     answer: false,
+//     },
+//     {question: "Greenland is almost as big as Africa.",
+//     answer: false,
+//     },
+//     {question: "Greenland is covered with grass and Iceland covered with ice.",
+//     answer: false,
+//     },
+//     {question: "There is a city called Rome in every continent on Earth.",
+//     "answer": false,
+//     },
+//     {question: "California is larger than Japan.",
+//     answer: true,
+//     }
+// ];
+
+let quizQuestions;
+async function getQuestions() {
+  const response = await fetch("https://opentdb.com/api.php?amount=10&category=22&difficulty=easy&type=boolean");
+  quizQuestions = (await response.json()).results;
+};
+
+getQuestions();
+console.log(quizQuestions);
 
 // Hides user feedback elements
 document.getElementById("response-correct").classList.add("hide");
@@ -50,15 +60,15 @@ document.getElementById("play-again-button").addEventListener("click", function(
 
 let answered = false;
 
-function checkAnswer(answer) {
-    let userAnswer = quizQuestions[currentQuestion].answer;
+function checkAnswer(correct_answer) {
+    let userAnswer = quizQuestions[currentQuestion].correct_answer;
     // Don't process if the user has already answered
     // Ideas for setting up this flag and disabling the buttons are from tutoring (Martin)
     if (answered) {
         return;
     }
 
-    if (userAnswer === answer) {
+    if (userAnswer === correct_answer) {
         document.getElementById("response-correct").classList.remove("hide");
         incrementScore();
     } else {
