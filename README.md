@@ -16,13 +16,13 @@ Returning user goals:
 
 ### User stories
 As a new user:
-<!-- - I would like to xyz. <br> -->
+- I would like to learn more about world geography in a simple and fun way.
 
 As a returning user:
-<!-- - I would like to xyz. <br> -->
+- I would like to test my knowledge and learn more.
 
 ### Structure of the website
-This is a one-page website designed to provide users with a fun game that’s easy to enjoy on all types of devices. The simplicity of the design, fun questions, and encouraging feedback give a satisfying user experience.
+This is a one-page website designed to provide users with a simple geography game that’s easy to enjoy on all types of devices. The simplicity of the design, fun questions, and encouraging feedback give a satisfying user experience.
 
 ### Surface
 Colors <br>
@@ -46,11 +46,14 @@ The website has a header with a logo and score area. In the body of the website 
 <br>
 - Score area: The score area is within the header. It is centered below the other content, and on larger screens where the header content is evenly spaced, it appears at the right side.
 <br>
-- Question area: The current question appears clearly in the center of the page.
+- Introduction: This section gives the user instructions about how to play the game. Clicking "Start game" hides the instructions so the game can begin.
 <br>
-- Button area: There are two buttons for answers: "True" and "False." Once the user clicks their choice, an alert shows whether it was right or wrong. There is also a button for "Next question," which loads the following question.
+- Question area: The current question appears clearly in the center of the page. There are ten questions per game, and the questions are loaded with Fetch API using [Open Trivia Database](https://opentdb.com/api_config.php), as suggested by my mentor, Adegbenga Adeye.
 <br>
-- Responses: These show the user whether their answer was correct or not. I searched online for [tips](https://www.geeksforgeeks.org/how-to-stack-elements-in-css/), and layered elements with CSS to create this functionality.
+- Answer area: There are two buttons for answers: "True" and "False." The "Next question" button loads the following question.
+<br>
+- Responses: After the user clicks their answer, the response tells them whether their answer was correct or not. I searched online for [tips](https://www.geeksforgeeks.org/how-to-stack-elements-in-css/), and layered elements with CSS to create this functionality.
+<br>
 - Play again: This reloads the page, restarting the game from the beginning. I found information about how to do this from [freeCodeCamp](https://www.freecodecamp.org/news/javascript-refresh-page-how-to-reload-a-page-in-js/#:~:text=Method%201%3A%20How%20to%20Refresh,and%20loading%20the%20latest%20content.).
 
 ### Wireframes
@@ -63,7 +66,6 @@ I used the [globe with meridians emoji](https://favicon.io/emoji-favicons/globe-
 
 ### Future implementations
 In the future this website can be updated with more questions and greater functionality. For instance: <br>
-- Link the questions to Fetch API to provide more questions <br>
 - Create a choice of special quiz topics
 - Make the scoring system more sophisticated
 
@@ -90,12 +92,12 @@ Macbook Air
 
 ### User stories testing
 As a new user:
-<!-- - _I would like to xyz._ <br>
-The game... -->
+- _I would like to learn more about world geography in a simple and fun way._ <br>
+The game is easy to understand, and shows fun questions about places all over the world.
 
 As a returning user:
-<!-- - _I would like to xyz._ <br>
-The game... -->
+- _I would like to test my knowledge and learn more._ <br>
+There is always more to discover because new questions are loaded automatically with Fetch API.
 
 ## Issues found during development
 
@@ -124,10 +126,12 @@ With initial styles and hard-coded placeholder content, the website looked like 
 
 ### Finished site
 These are screenshots of the finished site: <br>
+<!-- SCREENSHOTS -->
 
 ## Credits
 - I used code from the Love Maths Walkthrough Project to outline this project, and code from the Love Running Walkthrough Project to style it.
 - I also used suggestions from my Code Institute tutors, Roman and Martin, and code from Ricoshae's [tutorial](https://www.youtube.com/watch?v=MnkD82iHe30), which was suggested by my cohort facilitator, David Calikes.
 - I used [this readme](https://github.com/marcin-kli/MP1/blob/Milestone-Projects/README.md#annies-portfolio-website) by Annie O'Donahoe as a framework for writing my readme.
+- The questions for this quiz come from [Open Trivia Database](https://opentdb.com/api_config.php).
 - I would like to thank my Code Institute mentor, Adegbenga Adeye, for ideas, support, and extra resources. <br>
 - Thanks to my cohort facilitator, David Calikes, for reassurance and reality-checks during this project.
