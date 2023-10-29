@@ -79,17 +79,18 @@ main {
  .question-area {
     /* Code from Love Maths Walkthrough Project to make responsive */
     width: 85%;
-    height: 55vh;
+    height: 25vh;
     max-height: 500px;
     max-width: 830px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 220px;
     padding: 0 5px;
     background-color: #cdf3eb;
 }
 
 #question-text {
-    padding-top: 40vh;
+    padding: 5px;
     font-size: 120%;
 }
 
@@ -168,11 +169,11 @@ button {
 
     .question-area {
         height: 40vh;
+        margin-top: 70px;
     }
 
     #question-text {
-        padding-top: 25vh;
-
+        padding-top: 20vh;
     }
 
     .answer-area {
