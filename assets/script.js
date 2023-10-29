@@ -2,24 +2,6 @@
 
 let currentQuestion = 0;
 
-// let quizQuestions = [
-//     {question: "The Republic of Malta is the smallest microstate worldwide.",
-//     answer: false,
-//     },
-//     {question: "Greenland is almost as big as Africa.",
-//     answer: false,
-//     },
-//     {question: "Greenland is covered with grass and Iceland covered with ice.",
-//     answer: false,
-//     },
-//     {question: "There is a city called Rome in every continent on Earth.",
-//     "answer": false,
-//     },
-//     {question: "California is larger than Japan.",
-//     answer: true,
-//     }
-// ];
-
 const getQuestions = async function() { 
     //Async Function Expression
     const response = await fetch("https://opentdb.com/api.php?amount=10&category=22&difficulty=easy&type=boolean");
@@ -32,6 +14,7 @@ const getQuestions = async function() {
 document.getElementById("response-correct").classList.add("hide");
 document.getElementById("response-incorrect").classList.add("hide");
 document.getElementById("play-again-button").classList.add("hide");
+document.getElementById("intro").classList.remove("hide");
 
 // Shows first question and sets score to 0
 document.getElementById("question-text").innerHTML = quizQuestions[0].question;
@@ -42,6 +25,10 @@ document.getElementById("correct-scores").innerText = 0;
 document.getElementById("quiz-questions-length").innerText = quizQuestions.length;
 
 // Event listeners
+document.getElementById("intro-button").addEventListener("click", function(event) {
+    hideIntro();
+});
+
 document.getElementById("true-button").addEventListener("click", function(event) {
     checkAnswer("True");
 });
@@ -57,6 +44,10 @@ document.getElementById("next-question").addEventListener("click", function(even
 document.getElementById("play-again-button").addEventListener("click", function(event) {
     resetGame();
 });
+
+function hideIntro() {
+    document.getElementById("intro-text").classList.add("hide");
+}
 
 let answered = false;
 
