@@ -94,6 +94,31 @@ main {
     font-size: 120%;
 }
 
+#intro {
+    display: flex;
+    justify-content: center;
+}
+
+#intro-text {
+    border: 2px solid #1a535c;
+    background-color: #f7fff7;
+    z-index: 99;
+    position: absolute;
+    width: 85%;
+    max-width: 830px;
+    padding: 7px;
+    font-size: 100%;
+}
+
+#intro-text span {
+    font-weight: 900;
+}
+
+#intro-text button {
+    width: 120px;
+    background-color: #cdf3eb;
+}
+
 .answer-area {
     width: 85%;
     height: 20vh;
