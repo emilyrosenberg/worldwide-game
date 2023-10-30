@@ -4,7 +4,8 @@ let currentQuestion = 0;
 let quizQuestions;
 
 const getQuestions = async function() { 
-    //Async Function Expression
+    // Async Function Expression
+    // Idea and code to use Fetch API from my mentor, Adegbenga Adeye
     const response = await fetch("https://opentdb.com/api.php?amount=10&category=22&difficulty=easy&type=boolean");
     quizQuestions = (await response.json()).results;
 };
@@ -52,6 +53,7 @@ function hideIntro() {
 
 let answered = false;
 
+// Checks the user answer and responds with feedback
 function checkAnswer(correct_answer) {
     let userAnswer = quizQuestions[currentQuestion].correct_answer;
     // Don't process if the user has already answered
@@ -99,6 +101,7 @@ function nextQuestion() {
     document.getElementById("question-text").innerHTML = quizQuestions[currentQuestion].question;
 }
 
+// Resets the game so the user can play again
 function resetGame() {
     location.reload();
 }
