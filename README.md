@@ -135,9 +135,8 @@ With initial styles and hard-coded placeholder content, the website looked like 
 These are screenshots of the finished site: <br>
 ![Landing page on mobile](assets/images/readme-images/screenshot1.png){width=50px}
 ![Question on mobile](assets/images/readme-images/screenshot2.png)
-![Answer feedback on mobile](assets/images/readme-images/screenshot3.png) <br>
-
-
+![Answer feedback on mobile](assets/images/readme-images/screenshot3.png)
+![Question on desktop](assets/images/readme-images/screenshot4.png)
 
 ## Credits
 - I used code from the Love Maths Walkthrough Project to outline this project, and code from the Love Running Walkthrough Project to style it.
@@ -145,4 +144,4 @@ These are screenshots of the finished site: <br>
 - I used [this readme](https://github.com/marcin-kli/MP1/blob/Milestone-Projects/README.md#annies-portfolio-website) by Annie O'Donahoe as a framework for writing my readme.
 - The questions for this quiz come from [Open Trivia Database](https://opentdb.com/api_config.php).
 - I would like to thank my Code Institute mentor, Adegbenga Adeye, for ideas, support, and extra resources. <br>
-- Thanks to my cohort facilitator, David Calikes, for reassurance and reality-checks during this project.
+- Thanks to my cohort facilitator, David Calikes, for reassurance and reality-checks during this project, as well as advice for how to make the website more polished and interesting.
