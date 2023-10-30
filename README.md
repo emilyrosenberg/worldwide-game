@@ -42,18 +42,25 @@ I used Emojipedia to find and download the logo image. The outline of a globe re
 
 ## Features
 The website has a header with a logo and score area. In the body of the website there is an area for questions, and buttons for the answer choices (True or False) and to show the next question. <br>
+
 - Header: The header includes a fun logo and the title of the game.
 <br>
+
 - Score area: The score area is within the header. It is centered below the other content, and on larger screens where the header content is evenly spaced, it appears at the right side.
 <br>
+
 - Introduction: This section gives the user instructions about how to play the game. Clicking "Start game" hides the instructions so the game can begin.
 <br>
+
 - Question area: The current question appears clearly in the center of the page. There are ten questions per game, and the questions are loaded with Fetch API using [Open Trivia Database](https://opentdb.com/api_config.php), as suggested by my mentor, Adegbenga Adeye.
 <br>
+
 - Answer area: There are two buttons for answers: "True" and "False." The "Next question" button loads the following question.
 <br>
+
 - Responses: After the user clicks their answer, the response tells them whether their answer was correct or not. I searched online for [tips](https://www.geeksforgeeks.org/how-to-stack-elements-in-css/), and layered elements with CSS to create this functionality.
 <br>
+
 - Play again: This reloads the page, restarting the game from the beginning. I found information about how to do this from [freeCodeCamp](https://www.freecodecamp.org/news/javascript-refresh-page-how-to-reload-a-page-in-js/#:~:text=Method%201%3A%20How%20to%20Refresh,and%20loading%20the%20latest%20content.).
 
 ### Wireframes
