@@ -16,10 +16,10 @@ Returning user goals:
 
 ### User stories
 As a new user:
-- I would like to learn more about world geography in a simple and fun way.
+- _I would like to learn more about world geography in a simple and fun way._
 
 As a returning user:
-- I would like to test my knowledge and learn more.
+- _I would like to test my knowledge and learn even more about world geography._
 
 ### Structure of the website
 This is a one-page website designed to provide users with a simple geography game that’s easy to enjoy on all types of devices. The simplicity of the design, fun questions, and encouraging feedback give a satisfying user experience.
@@ -30,7 +30,7 @@ I developed a color palette using [Coolors](https://coolors.co/). This turquoise
 <br>
 ![Color palette with shades of turquoise](assets/images/readme-images/color-palette.png)
 <br>
-For the background design, I used a [CSS pattern](https://www.magicpattern.design/tools/css-backgrounds) as suggested by my cohort facilitator, David Calikes.
+For the background design, I used a [CSS pattern](https://www.magicpattern.design/tools/css-backgrounds) as suggested by my cohort facilitator, David Calikes. This geometric pattern reflects the meridian lines on the globe.
 
 Fonts <br>
 I used [Google Fonts](https://fonts.google.com/specimen/Raleway) and chose a sans serif font with an interesting uppercase "W" that makes a fun logo for the game. <br>
@@ -41,25 +41,19 @@ I used Emojipedia to find and download the logo image. The outline of a globe re
 ![Logo image](assets/images/globe-with-meridians_1f310.png) <br>
 
 ## Features
-The website has a header with a logo and score area. In the body of the website there is an area for questions, and buttons for the answer choices (True or False) and to show the next question. <br>
+The website has a header with a logo and score area. In the body of the website there is an area for questions, and buttons for the answer choices (True or False) and to show the next question. 
 
 - Header: The header includes a fun logo and the title of the game.
-<br>
 
-- Score area: The score area is within the header. It is centered below the other content, and on larger screens where the header content is evenly spaced, it appears at the right side.
-<br>
+- Score area: The score area is within the header. It is centered below the other content in the mobile version, and on larger screens where the header content is evenly spaced, it appears at the right side.
 
-- Introduction: This section gives the user instructions about how to play the game. Clicking "Start game" hides the instructions so the game can begin.
-<br>
+- Introduction: This section appears when the page loads, and gives the user instructions about how to play the game. Clicking "Start game" hides the instructions so the game can begin.
 
 - Question area: The current question appears clearly in the center of the page. There are ten questions per game, and the questions are loaded with Fetch API using [Open Trivia Database](https://opentdb.com/api_config.php), as suggested by my mentor, Adegbenga Adeye.
-<br>
 
 - Answer area: There are two buttons for answers: "True" and "False." The "Next question" button loads the following question.
-<br>
 
-- Responses: After the user clicks their answer, the response tells them whether their answer was correct or not. I searched online for [tips](https://www.geeksforgeeks.org/how-to-stack-elements-in-css/), and layered elements with CSS to create this functionality.
-<br>
+- Responses: After the user clicks an answer, the response tells them whether their answer was correct or not. I searched online for [tips](https://www.geeksforgeeks.org/how-to-stack-elements-in-css/), and layered elements with CSS to create this functionality. This replaced the alerts from the walkthrough project, and located the feedback within the DOM.
 
 - Play again: This reloads the page, restarting the game from the beginning. I found information about how to do this from [freeCodeCamp](https://www.freecodecamp.org/news/javascript-refresh-page-how-to-reload-a-page-in-js/#:~:text=Method%201%3A%20How%20to%20Refresh,and%20loading%20the%20latest%20content.).
 
@@ -73,7 +67,8 @@ I used the [globe with meridians emoji](https://favicon.io/emoji-favicons/globe-
 
 ### Future implementations
 In the future this website can be updated with more questions and greater functionality. For instance: <br>
-- Create a choice of special quiz topics
+- Add more questions with different levels of difficulty
+- Create a choice of quiz topics
 - Make the scoring system more sophisticated
 
 ### Technologies used:
@@ -103,14 +98,14 @@ As a new user:
 The game is easy to understand, and shows fun questions about places all over the world.
 
 As a returning user:
-- _I would like to test my knowledge and learn more._ <br>
+- _I would like to test my knowledge and learn even more about world geography._ <br>
 There is always more to discover because new questions are loaded automatically with Fetch API.
 
 ## Issues found during development
 
 ### Performance testing
-I used Chrome Developer Tools for troubleshooting functionality and style problems during development. It was difficult to find the source of some issues on my own, and the Code Institute tutors helped the most.<br>
-Chrome Developer tools was really useful for testing the responsivity of the website, especially since I developed a wider-screen version first, and then created the mobile version. Because I was able to see the dimensions of each element, and how the flex styles were working, I was able to figure it out. <br>
+I used Chrome Developer Tools for troubleshooting functionality and style problems during development. It was difficult to find the source of some issues by searching on my own, and I got support from the Code Institute tutors, my cohort facilitator, and my mentor.<br>
+Chrome Developer tools was really useful for testing the responsivity of the website, especially since I developed a wider-screen version first, and then created the mobile version. Because I was able to see the dimensions of each element, and how the flex styles were working, I was able to figure out the style changes for the mobile version. <br>
 I used the Lighthouse tool to test performance in incognito mode, as suggested by my mentor.<br>
 These were the results on mobile: ![Lighthouse report for mobile](assets/images/readme-images/lighthouse-mobile.png)<br>
 And on desktop: ![Lighthouse report for desktop](assets/images/readme-images/lighthouse-desktop.png)
@@ -129,18 +124,20 @@ The live link can be found [here](https://emilyrosenberg.github.io/worldwide-gam
 ### During development
 I added intitial html and styles with placeholder background colors: ![Layout process on a phone](assets/images/readme-images/process1.png) ![Layout process on a larger screen](assets/images/readme-images/process2.png)<br>
 With initial styles and hard-coded placeholder content, the website looked like this:
-![Initial styles on a phone](assets/images/readme-images/initial-styles1.png) ![Initial styles on a larger screen](assets/images/readme-images/initial-styles2.png)
+![Initial styles on a phone](assets/images/readme-images/initial-styles1.png) ![Initial styles on a larger screen](assets/images/readme-images/initial-styles2.png) <br>
+Towards the end of the project, I made some style changes so that the website would look better on iPhone 5, and more similar across different screen sizes in general.
 
 ### Finished site
-These are screenshots of the finished site: <br>
-![Landing page on mobile](assets/images/readme-images/screenshot1.png){width=50px}
+These are screenshots of the finished website: <br>
+![Landing page on mobile](assets/images/readme-images/screenshot1.png)
 ![Question on mobile](assets/images/readme-images/screenshot2.png)
 ![Answer feedback on mobile](assets/images/readme-images/screenshot3.png)
-![Question on desktop](assets/images/readme-images/screenshot4.png)
+![Landing page on desktop](assets/images/readme-images/screenshot4.png)
+![Question on desktop](assets/images/readme-images/screenshot5.png)
 
 ## Credits
 - I used code from the Love Maths Walkthrough Project to outline this project, and code from the Love Running Walkthrough Project to style it.
-- I also used suggestions from my Code Institute tutors, Roman and Martin, and code from Ricoshae's [tutorial](https://www.youtube.com/watch?v=MnkD82iHe30), which was suggested by my cohort facilitator, David Calikes.
+- I developed the game further using suggestions from my Code Institute tutors, Roman and Martin, and code from Ricoshae's [tutorial](https://www.youtube.com/watch?v=MnkD82iHe30), which was suggested by my cohort facilitator, David Calikes.
 - I used [this readme](https://github.com/marcin-kli/MP1/blob/Milestone-Projects/README.md#annies-portfolio-website) by Annie O'Donahoe as a framework for writing my readme.
 - The questions for this quiz come from [Open Trivia Database](https://opentdb.com/api_config.php).
 - I would like to thank my Code Institute mentor, Adegbenga Adeye, for ideas, support, and extra resources. <br>
