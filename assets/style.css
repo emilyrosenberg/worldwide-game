@@ -92,6 +92,7 @@ main {
 #question-text {
     padding-top: 15px;
     font-size: 120%;
+    font-weight: 500;
 }
 
 #intro {
