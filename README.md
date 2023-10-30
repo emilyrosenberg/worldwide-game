@@ -57,7 +57,7 @@ The website has a header with a logo and score area. In the body of the website 
 - Play again: This reloads the page, restarting the game from the beginning. I found information about how to do this from [freeCodeCamp](https://www.freecodecamp.org/news/javascript-refresh-page-how-to-reload-a-page-in-js/#:~:text=Method%201%3A%20How%20to%20Refresh,and%20loading%20the%20latest%20content.).
 
 ### Wireframes
-I used Balsamiq to create wireframes for this game. This was very helpful for planning the structure and functionality. <br>
+I used Balsamiq to create wireframes for this game. This was very helpful for planning the structure and functionality. I started out by using alerts for correct/incorrect answers, but was later able to build feedback elements within the DOM. <br>
 ![Wireframe of landing page](assets/images/readme-images/wireframe1.png)
 ![Wireframe of page with alert](assets/images/readme-images/wireframe2.png)
 
@@ -111,8 +111,7 @@ And on desktop: ![Lighthouse report for desktop](assets/images/readme-images/lig
 ### Code validation
 - HTML <br> I validated the HTML code with W3C and found no errors.
 - CSS <br> I validated the CSS code with (Jigsaw) validator and found no errors.
-- JavaScript <br>
-<!-- I validated the Javascript code with JSHINT and found no warnings or errors. UPDATE THIS -->
+- JavaScript <br> I validated the Javascript code with JSHINT and found no errors.
 
 ## Deployment
 This website was deployed on GitHub pages. <br>
@@ -127,7 +126,11 @@ With initial styles and hard-coded placeholder content, the website looked like 
 
 ### Finished site
 These are screenshots of the finished site: <br>
-<!-- SCREENSHOTS -->
+![Landing page on mobile](assets/images/readme-images/screenshot1.png){width=50px}
+![Question on mobile](assets/images/readme-images/screenshot2.png)
+![Answer feedback on mobile](assets/images/readme-images/screenshot3.png) <br>
+
+
 
 ## Credits
 - I used code from the Love Maths Walkthrough Project to outline this project, and code from the Love Running Walkthrough Project to style it.
