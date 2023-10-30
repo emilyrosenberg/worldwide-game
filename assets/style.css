@@ -33,7 +33,7 @@ header {
 header img {
     height: 50px;
     width: 50px;
-    margin: 10px 54px;
+    margin: 0 54px;
 }
 
 h1 {
@@ -50,7 +50,7 @@ h2 {
     border: 2px solid #4ecdc4;
     padding: 5px;
     justify-content: center;
-    margin: 10px;
+    margin: 0 10px;
 }
 
 .score-area p {
@@ -68,7 +68,7 @@ main {
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     /* Add margin at the top prevent content from being covered by the header and footer */
-    margin-top: 100px;
+    margin-top: 7vh;
     /* Enable flex properties for child elements */
     display: flex;
     flex-direction: column;
@@ -116,11 +116,12 @@ main {
 
 #intro-text button {
     width: 120px;
+    margin-bottom: 5px;
 }
 
 .answer-area {
     width: 85%;
-    height: 20vh;
+    height: 25vh;
     max-height: 200px;
     max-width: 830px;
     margin-left: auto;
@@ -193,7 +194,7 @@ button {
 
     .question-area {
         height: 40vh;
-        margin-top: 70px;
+        margin-top: 80px;
     }
 
     #question-text {

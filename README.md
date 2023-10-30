@@ -1,7 +1,7 @@
 # 🌐 Worldwide True or False
 A simple geography quiz to test your knowledge and learn new facts.
 
-![Mockup on different devices, created with Techsini.]()
+![Mockup on different devices, created with Techsini.](assets/images/readme-images/mockup.png)
 
 ## UX
 ### Website owner goals
@@ -111,7 +111,8 @@ And on desktop: ![Lighthouse report for desktop](assets/images/readme-images/lig
 ### Code validation
 - HTML <br> I validated the HTML code with W3C and found no errors.
 - CSS <br> I validated the CSS code with (Jigsaw) validator and found no errors.
-- JavaScript <br> I validated the Javascript code with JSHINT and found no warnings or errors.
+- JavaScript <br>
+<!-- I validated the Javascript code with JSHINT and found no warnings or errors. UPDATE THIS -->
 
 ## Deployment
 This website was deployed on GitHub pages. <br>

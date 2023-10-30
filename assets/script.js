@@ -1,6 +1,7 @@
 // Idea from "How to create a TRUE or FALSE quiz question using JavaScript" https://www.youtube.com/watch?v=MnkD82iHe30
 
 let currentQuestion = 0;
+let quizQuestions;
 
 const getQuestions = async function() { 
     //Async Function Expression
